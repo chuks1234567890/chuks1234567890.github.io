@@ -113,6 +113,11 @@ body{
     height: 4em;
      margin: 5px;
   }
+  .wrapper{
+    border-right: none;
+    border-left: none;
+    border-radius: 0px;
+  }
   .cards{
     gap: 0px;
 
