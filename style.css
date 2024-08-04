@@ -74,10 +74,8 @@ body{
   height: 100%;
   position: absolute;
   border-radius: 7px;
-  background: #161a22;
   background-color: #f4c531;
-  border: 5px solid #000;
-  border-style: ridge;
+  
   pointer-events: none;
   backface-visibility: hidden;
   box-shadow: 4px 4px rgba(0,0,0,0.2);
