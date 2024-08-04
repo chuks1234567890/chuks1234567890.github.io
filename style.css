@@ -137,3 +137,13 @@ body{
 
   }
 }
+@media screen and (max-width:400px){
+  .cards{
+    gap: 5px;
+
+  }
+  .cards .card{
+    margin: 1px;
+  }
+
+}
