@@ -1,7 +1,7 @@
-const cards = document.querySelectorAll(".card");
-for (let i=0;i<cards.length; i++){
-    cards[i].style.transform=`rotateZ(${20*Math.random() -9}deg)`
-}
+// const cards = document.querySelectorAll(".card");
+// for (let i=0;i<cards.length; i++){
+//     cards[i].style.transform=`rotateZ(${20*Math.random() -9}deg)`
+// }
 let matched = 0;
 let cardOne, cardTwo;
 let disableDeck = false;
