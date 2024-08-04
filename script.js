@@ -1,8 +1,45 @@
-const cards = document.querySelectorAll(".card");
-
+let cards
+const card_holder=document.querySelector(".wrapper ul.cards ")
 let matched = 0;
 let cardOne, cardTwo;
 let disableDeck = false;
+let number_of_items=15
+const shuffle = (array) => { 
+    return array.sort(() => Math.random() - 0.5);
+};
+for (let i = 0; i <number_of_items*2; i++) {
+    card_holder.innerHTML+=`
+        <li class="card">
+          <div class="view front-view">
+            <img src="images/que_icon.svg" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="images/que_icon.svg" alt="card-img">
+          </div>
+        </li>
+    `
+    cards= document.querySelectorAll(".card");
+}
+function shuffleCard() {
+    matched = 0;
+    disableDeck = false;
+    cardOne = cardTwo = "";
+    let arr = [1, 2, 3, 4, 5, 6, 7, 8,9,10,11,12,13,14,15,1, 2, 3, 4, 5, 6, 7, 8,9,10,11,12,13,14,15];
+    
+    let arr_hld=[]
+    for (let i=0; i<2;i++){
+        arr_hld=(shuffle(arr))
+    }
+    console.log(arr_hld)
+
+    cards.forEach((card, i) => {
+        card.classList.remove("flip");
+        let imgTag = card.querySelector(".back-view img");
+        imgTag.src = `images/img-${arr_hld[i]}.svg`;
+        card.addEventListener("click", flipCard);
+    });
+}
+shuffleCard();
 
 function flipCard({target: clickedCard}) {
     if(cardOne !== clickedCard && !disableDeck) {
@@ -21,7 +58,7 @@ function flipCard({target: clickedCard}) {
 function matchCards(img1, img2) {
     if(img1 === img2) {
         matched++;
-        if(matched == 8) {
+        if(matched == 15``) {
             setTimeout(() => {
                 return shuffleCard();
             }, 1000);
@@ -44,22 +81,9 @@ function matchCards(img1, img2) {
     }, 1200);
 }
 
-function shuffleCard() {
-    matched = 0;
-    disableDeck = false;
-    cardOne = cardTwo = "";
-    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8];
-    arr.sort(() => Math.random() > 0.5 ? 1 : -1);
-    cards.forEach((card, i) => {
-        card.classList.remove("flip");
-        let imgTag = card.querySelector(".back-view img");
-        imgTag.src = `images/img-${arr[i]}.png`;
-        card.addEventListener("click", flipCard);
-    });
-}
 
-shuffleCard();
     
 cards.forEach(card => {
     card.addEventListener("click", flipCard);
 });
+const card_item=``
