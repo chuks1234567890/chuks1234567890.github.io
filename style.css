@@ -29,7 +29,7 @@ body{
 .cards{
   width: 100%;
   flex-wrap: wrap;
-  gap: 5px;
+  gap: 4px;
   justify-content: center;
 }
 .cards .card{
@@ -42,6 +42,7 @@ body{
   margin: 7px;
   height:70px;
   width: 70px;
+  
 }
 .card.shake{
   animation: shake 0.5s ease-in-out;
@@ -76,10 +77,12 @@ body{
   background: #161a22;
   background-color: #f4c531;
   border: 5px solid #000;
+  border-style: ridge;
   pointer-events: none;
   backface-visibility: hidden;
   box-shadow: 4px 4px rgba(0,0,0,0.2);
   transition: transform 0.25s linear;
+
 }
 .card .back-view{
   background-color: #fff;
