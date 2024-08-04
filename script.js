@@ -58,7 +58,7 @@ function flipCard({target: clickedCard}) {
 function matchCards(img1, img2) {
     if(img1 === img2) {
         matched++;
-        if(matched == 15``) {
+        if(matched == 15) {
             setTimeout(() => {
                 return shuffleCard();
             }, 1000);
