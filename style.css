@@ -78,7 +78,7 @@ body{
   border: 5px solid #000;
   pointer-events: none;
   backface-visibility: hidden;
-  box-shadow: 7px 7px rgba(0,0,0,0.3);
+  box-shadow: 4px 4px rgba(0,0,0,0.2);
   transition: transform 0.25s linear;
 }
 .card .back-view{
@@ -107,7 +107,15 @@ body{
     gap: 0px;
   }
 }
+@media screen and (max-width:640px){
+  body{
+    padding: 20px;
+  }
+}
 @media screen and (max-width:500px){
+  body{
+    padding: 0px;
+  }
   .cards .card{
     width: 4em;
     height: 4em;
@@ -117,9 +125,10 @@ body{
     border-right: none;
     border-left: none;
     border-radius: 0px;
+    box-shadow: 0px 12px rgba(0,0,0,0.2);
   }
   .cards{
-    gap: 0px;
+    gap: 5px;
 
   }
 }
